@@ -11,6 +11,8 @@
 		46E694381B289730000B634E /* InAppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E694371B289730000B634E /* InAppUtils.m */; };
 		46E6943E1B289730000B634E /* libInAppUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E694321B289730000B634E /* libInAppUtils.a */; };
 		46E694841B28E42F000B634E /* SKProduct+StringPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E694831B28E42F000B634E /* SKProduct+StringPrice.m */; };
+		E70E99531FCC2F5700601CA2 /* SKProduct+StringPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E694831B28E42F000B634E /* SKProduct+StringPrice.m */; };
+		E70E99541FCC2F5E00601CA2 /* InAppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E694371B289730000B634E /* InAppUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E70E99481FCC2E6300601CA2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +55,7 @@
 		46E694431B289730000B634E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E694821B28E404000B634E /* SKProduct+StringPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKProduct+StringPrice.h"; sourceTree = "<group>"; };
 		46E694831B28E42F000B634E /* SKProduct+StringPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+StringPrice.m"; sourceTree = "<group>"; };
+		E70E994A1FCC2E6300601CA2 /* libInAppUtils-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libInAppUtils-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E6943E1B289730000B634E /* libInAppUtils.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70E99471FCC2E6300601CA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +98,7 @@
 			children = (
 				46E694321B289730000B634E /* libInAppUtils.a */,
 				46E6943D1B289730000B634E /* InAppUtilsTests.xctest */,
+				E70E994A1FCC2E6300601CA2 /* libInAppUtils-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +168,23 @@
 			productReference = 46E6943D1B289730000B634E /* InAppUtilsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E70E99491FCC2E6300601CA2 /* InAppUtils-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70E99521FCC2E6300601CA2 /* Build configuration list for PBXNativeTarget "InAppUtils-tvOS" */;
+			buildPhases = (
+				E70E99461FCC2E6300601CA2 /* Sources */,
+				E70E99471FCC2E6300601CA2 /* Frameworks */,
+				E70E99481FCC2E6300601CA2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InAppUtils-tvOS";
+			productName = "InAppUtils-tvOS";
+			productReference = E70E994A1FCC2E6300601CA2 /* libInAppUtils-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +199,10 @@
 					};
 					46E6943C1B289730000B634E = {
 						CreatedOnToolsVersion = 6.3.1;
+					};
+					E70E99491FCC2E6300601CA2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -179,6 +220,7 @@
 			targets = (
 				46E694311B289730000B634E /* InAppUtils */,
 				46E6943C1B289730000B634E /* InAppUtilsTests */,
+				E70E99491FCC2E6300601CA2 /* InAppUtils-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70E99461FCC2E6300601CA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70E99541FCC2F5E00601CA2 /* InAppUtils.m in Sources */,
+				E70E99531FCC2F5700601CA2 /* SKProduct+StringPrice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +411,61 @@
 			};
 			name = Release;
 		};
+		E70E99501FCC2E6300601CA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		E70E99511FCC2E6300601CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -386,6 +492,15 @@
 			buildConfigurations = (
 				46E6944A1B289730000B634E /* Debug */,
 				46E6944B1B289730000B634E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70E99521FCC2E6300601CA2 /* Build configuration list for PBXNativeTarget "InAppUtils-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70E99501FCC2E6300601CA2 /* Debug */,
+				E70E99511FCC2E6300601CA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
