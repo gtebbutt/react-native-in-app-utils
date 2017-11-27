@@ -9,6 +9,7 @@
     NSArray *products;
     NSMutableDictionary *_callbacks;
     SKProductsRequest *request;
+    SKProduct *product;
 }
 
 - (instancetype)init
@@ -94,7 +95,7 @@ RCT_EXPORT_METHOD(purchaseProduct:(NSString *)productIdentifier
                   username:(NSString *)username
                   callback:(RCTResponseSenderBlock)callback
 {
-    SKProduct *product;
+    product = nil;
     for(SKProduct *p in products)
     {
         if([productIdentifier isEqualToString:p.productIdentifier]) {
